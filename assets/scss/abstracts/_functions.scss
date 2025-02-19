@@ -1,0 +1,15 @@
+@function hex-to-rgb($color) {
+    $red: red($color);   // Extract the red value
+    $green: green($color); // Extract the green value
+    $blue: blue($color);  // Extract the blue value
+
+    @return #{$red}, #{$green}, #{$blue}; // Return the RGB string
+}
+
+@function hex-to-rgba($color, $alpha: 1) {
+    $red: red($color);   // Extract the red value
+    $green: green($color); // Extract the green value
+    $blue: blue($color);  // Extract the blue value
+
+    @return rgba($red, $green, $blue, $alpha); // Return the RGB string
+}

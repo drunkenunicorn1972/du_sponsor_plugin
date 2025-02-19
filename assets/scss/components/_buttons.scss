@@ -1,0 +1,9 @@
+.splide__arrow {
+    opacity: 1;
+    color: var(--rvr-white);
+    background-color: var(--rvr-primary-color);
+    border: 3px solid rgba(255,255,255,0.6);
+    svg {
+        fill: var(--rvr-white);
+    }
+}
