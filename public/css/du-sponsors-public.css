@@ -1,0 +1,14 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.du-sponsor-splide .splide__arrows { display: none; }
+.du-slide-content img { height: 75px !important; width: auto !important; padding: 0 2rem !important; object-fit: contain; }
+
+@media (max-width: 400px){
+    .du-slide-content img { height: 50px !important; width: auto !important; padding: 0 2rem !important; object-fit: contain; }
+}
+
+.du-sponsor-grid .sponsor-grid { display: flex; flex-wrap: wrap; justify-content: space-evenly; }
+.du-sponsor-grid .du-sponsor-item a img { height: 100px !important; width: auto !important; object-fit: contain; }
+.du-sponsor-grid .du-sponsor-item { margin: 1rem; padding: 1rem; border: 1px solid #ccc; border-radius: 12px; }
