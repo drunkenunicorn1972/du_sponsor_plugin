@@ -75,6 +75,16 @@ class Du_Sponsor_Slider_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'du_sponsor_slider_amount',
+            [
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'label' => esc_html__( 'Amount of logos in the slider', 'du-sponsors' ),
+                'label_block' => true,
+                'default' => '12',
+            ]
+        );
+
         $this->end_controls_section();
 
     }
@@ -84,6 +94,11 @@ class Du_Sponsor_Slider_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
         $elem_id = $this->get_id();
         $sponsor_category = $settings['du_sponsor_category'];
+        if (isset($settings['du_sponsor_slider_amount']) && intval($settings['du_sponsor_slider_amount']) > 0) {
+            $logo_amount = intval($settings['du_sponsor_slider_amount']);
+        } else {
+            $logo_amount = 12;
+        }
 ?>
         <section class="du-sponsor-splide splide" id="splide-<?php echo $elem_id; ?>">
         <div class="du-splide__track splide__track">
@@ -103,7 +118,8 @@ class Du_Sponsor_Slider_Widget extends \Elementor\Widget_Base
                 ),
             ),
             'post_status' => 'publish', // Only get published posts
-            'posts_per_page' => -1,     // Retrieve all matching posts (use a number to limit)
+            'posts_per_page' => $logo_amount,    // Retrieve all matching posts (use a number to limit)
+            'orderby' => 'rand',    // Random sorting for surprise effect
         );
 
         // Create custom query
@@ -139,7 +155,6 @@ class Du_Sponsor_Slider_Widget extends \Elementor\Widget_Base
         <script>
             // document.addEventListener( 'DOMContentLoaded', function() {
             let elementId_<?php echo $elem_id; ?> = '#splide-<?php echo $elem_id; ?>';
-            console.log('Starting slider ' + elementId_<?php echo $elem_id; ?>);
             // bind it to splide
             let slider_<?php echo $elem_id; ?> = new Splide(elementId_<?php echo $elem_id; ?>, {
                 type: 'loop',
@@ -156,13 +171,4 @@ class Du_Sponsor_Slider_Widget extends \Elementor\Widget_Base
         <?php
     }
 
-    protected function content_template() {
-        $elem_id = $this->get_id();
-        ?>
-        <script>
-            let elementId_<?php echo $elem_id; ?> = '#splide-<?php echo $elem_id; ?>';
-            slider_<?php echo $elem_id; ?>.refresh();
-        </script>
-        <?php
-    }
 }

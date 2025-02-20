@@ -3,26 +3,33 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 let path = require('path');
 
 // change these variables to fit your project
-const jsPath = './assets/js';
-const cssPath = './assets/scss';
-const outputPath = 'public';
+const jsPublicPath = './assets/public/js';
+const cssPublicPath = './assets/public/scss';
+const outputPublicPath = 'public';
+const jsAdminPath = './assets/admin/js';
+const cssAdminPath = './assets/admin/scss';
+const outputAdminPath = 'admin';
+
 const localDomain = 'https://ovh.local';
-const entryPoints = {
+const entryPointsPublic = {
     // 'app' is the output name, people commonly use 'bundle'
     // you can have more than 1 entry point
-    'app': jsPath + '/app.js',
-    'style': cssPath + '/style.scss'
+    'app': jsPublicPath + '/app.js',
+    'style': cssPublicPath + '/style.scss',
+    'app_admin': jsAdminPath + '/du-sponsors-admin.js',
+    'style_admin': cssAdminPath + '/style.scss'
+
 };
 
 module.exports = {
-    entry: entryPoints,
+    entry: entryPointsPublic,
     output: {
-        path: path.resolve(__dirname, outputPath),
-        filename: 'js/[name].js'
+        path: path.resolve(__dirname, outputPublicPath),
+        filename: 'js/du-sponsors-[name].js'
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/du-sponsors-public.css',
+            filename: 'css/du-sponsors-[name].css',
         }),
 
         // Uncomment this if you want to use CSS Live reload

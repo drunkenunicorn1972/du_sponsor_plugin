@@ -20,7 +20,7 @@ class Du_Sponsor_Grid_Widget extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return __('Sponsor Slider', 'du-elem');
+        return __('Sponsor Grid', 'du-elem');
     }
 
     public function get_icon()
@@ -119,6 +119,7 @@ class Du_Sponsor_Grid_Widget extends \Elementor\Widget_Base
                         ),
                         'post_status' => 'publish', // Only get published posts
                         'posts_per_page' => -1,     // Retrieve all matching posts (use a number to limit)
+                        'orderby' => 'rand',    // Random sorting for surprise effect
                     );
 
                     // Create custom query

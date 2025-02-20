@@ -57,6 +57,15 @@ class Du_Sponsors {
 	 */
 	protected $version;
 
+    /**
+     * The current dir url of the plugin.
+     *
+     * @since    1.0.4
+     * @access   protected
+     * @var      string    $dirurl    The current version of the plugin.
+     */
+    protected $dirurl;
+
 	/**
 	 * Define the core functionality of the plugin.
 	 *
@@ -66,13 +75,14 @@ class Du_Sponsors {
 	 *
 	 * @since    1.0.0
 	 */
-	public function __construct() {
+	public function __construct($plugin_base_dir) {
 		if ( defined( 'DU_SPONSORS_VERSION' ) ) {
 			$this->version = DU_SPONSORS_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'du-sponsors';
+        $this->dirurl = $plugin_base_dir;
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -152,7 +162,7 @@ class Du_Sponsors {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Du_Sponsors_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Du_Sponsors_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_dirurl() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -225,5 +235,14 @@ class Du_Sponsors {
 	public function get_version() {
 		return $this->version;
 	}
+
+    /**
+     * Retrieves the directory URL associated with the instance.
+     *
+     * @return string The directory URL.
+     */
+    public function get_dirurl() {
+        return $this->dirurl;
+    }
 
 }

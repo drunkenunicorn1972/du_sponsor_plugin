@@ -75,7 +75,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-du-sponsors.php';
  */
 function run_du_sponsors() {
 
-	$plugin = new Du_Sponsors();
+    $plugin_base_dir = plugin_dir_url( __FILE__ );
+	$plugin = new Du_Sponsors($plugin_base_dir);
 	$plugin->run();
 
 }

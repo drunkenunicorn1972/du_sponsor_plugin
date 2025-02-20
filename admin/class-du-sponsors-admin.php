@@ -40,6 +40,8 @@ class Du_Sponsors_Admin {
 	 */
 	private $version;
 
+    private $dirurl;
+
 	/**
 	 * Initialize the class and set its properties.
 	 *
@@ -47,10 +49,11 @@ class Du_Sponsors_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $plugin_name, $version, $dirurl ) {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+        $this->dirurl = $dirurl;
 
 	}
 
@@ -73,7 +76,7 @@ class Du_Sponsors_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/du-sponsors-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, $this->dirurl . 'public/css/du-sponsors-style_admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +99,7 @@ class Du_Sponsors_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/du-sponsors-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, $this->dirurl . 'public/js/du-sponsors-app_admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 

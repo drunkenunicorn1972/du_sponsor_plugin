@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Sponsor Lists\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-13 19:28+0000\n"
-"PO-Revision-Date: 2025-02-19 09:59+0000\n"
+"PO-Revision-Date: 2025-02-20 15:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: Nederlands\n"
 "Language: nl_NL\n"
@@ -15,41 +15,51 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: du-sponsors"
 
-#: public/class-du-sponsors-public.php:120
+#: public/class-du-sponsors-public.php:125
 msgid "Add New"
 msgstr "Nieuw toevoegen"
 
-#: public/class-du-sponsors-public.php:165
+#: public/class-du-sponsors-public.php:171
 msgid "Add New Category"
 msgstr "Nieuwe categorie toevoegen"
 
-#: public/class-du-sponsors-public.php:121
+#: public/class-du-sponsors-public.php:126
 msgid "Add New Sponsor"
 msgstr "Nieuwe sponsor toevoegen"
 
-#: public/class-du-sponsors-public.php:160
-#: widgets/class-du-sponsor-slider.php:60 widgets/class-du-sponsor-grid.php:60
+#: public/class-du-sponsors-public.php:275
+msgid "Advert 1 (Vertical)"
+msgstr "Advertentie 1 (verticaal)"
+
+#: public/class-du-sponsors-public.php:295
+msgid "Advert 2 (Horizontal)"
+msgstr "Advertentie 2 (Horizontaal)"
+
+#: public/class-du-sponsors-public.php:166
+#: widgets/class-du-sponsor-slider.php:60
+#: widgets/class-du-sponsor-adrotator.php:60
+#: widgets/class-du-sponsor-grid.php:60
 msgid "All Categories"
 msgstr "Alle categorieën"
 
-#: public/class-du-sponsors-public.php:125
+#: public/class-du-sponsors-public.php:130
 msgid "All Sponsors"
 msgstr "Alle sponsors"
 
-#: public/class-du-sponsors-public.php:167
+#: widgets/class-du-sponsor-slider.php:82
+msgid "Amount of logos in the slider"
+msgstr "Hoeveelheid logo's in de slider"
+
+#: public/class-du-sponsors-public.php:173
 msgid "Categories"
 msgstr "Categorieën"
 
-#: public/class-du-sponsors-public.php:263
-msgid "Choose Image"
-msgstr "Afbeelding kiezen"
-
-#: public/class-du-sponsors-public.php:234
+#: public/class-du-sponsors-public.php:250
 msgid "Contact Address"
 msgstr "Contact Adres"
 
-#: public/class-du-sponsors-public.php:230
-#: public/class-du-sponsors-public.php:346
+#: public/class-du-sponsors-public.php:245
+#: public/class-du-sponsors-public.php:394
 msgid "Contact Email"
 msgstr "Contact e-mail"
 
@@ -57,17 +67,21 @@ msgstr "Contact e-mail"
 msgid "Drunken Unicorn"
 msgstr "Dronken Eenhoorn"
 
-#: public/class-du-sponsors-public.php:387
+#: public/class-du-sponsors-public.php:437
 msgid "DU Sponsoren"
 msgstr "DU Sponsoren"
 
-#: public/class-du-sponsors-public.php:163
+#: public/class-du-sponsors-public.php:169
 msgid "Edit Category"
 msgstr "Categorie bewerken"
 
-#: public/class-du-sponsors-public.php:123
+#: public/class-du-sponsors-public.php:128
 msgid "Edit Sponsor"
 msgstr "Bewerk sponsor"
+
+#: widgets/class-du-sponsor-adrotator.php:84
+msgid "Horizontal"
+msgstr "Horizontaal"
 
 #. URI of the plugin
 msgid "https://www.drunken-unicorn.eu"
@@ -81,53 +95,61 @@ msgstr "https://www.drunken-unicorn.eu/"
 msgid "Large"
 msgstr "Groot"
 
+#: public/class-du-sponsors-public.php:260
+msgid "Logo"
+msgstr "Logo"
+
 #: widgets/class-du-sponsor-grid.php:85
 msgid "Medium"
 msgstr "Middel"
 
-#: public/class-du-sponsors-public.php:166
+#: public/class-du-sponsors-public.php:172
 msgid "New Category Name"
 msgstr "Nieuwe categorienaam"
 
-#: public/class-du-sponsors-public.php:122
+#: public/class-du-sponsors-public.php:127
 msgid "New Sponsor"
 msgstr "Nieuwe sponsor"
 
-#: public/class-du-sponsors-public.php:128
+#: public/class-du-sponsors-public.php:133
 msgid "No sponsors found in Trash."
 msgstr "Geen sponsors gevonden in Prullenbak."
 
-#: public/class-du-sponsors-public.php:127
+#: public/class-du-sponsors-public.php:132
 msgid "No sponsors found."
 msgstr "Geen sponsors gevonden."
 
-#: public/class-du-sponsors-public.php:161
+#: public/class-du-sponsors-public.php:167
 msgid "Parent Category"
 msgstr "Ouder-categorie"
 
-#: public/class-du-sponsors-public.php:162
+#: public/class-du-sponsors-public.php:168
 msgid "Parent Category:"
 msgstr "Oudercategorie:"
 
-#: public/class-du-sponsors-public.php:238
+#: public/class-du-sponsors-public.php:255
 msgid "Phone Number"
 msgstr "Telefoonnummer"
 
-#: public/class-du-sponsors-public.php:248
-msgid "Preview image"
-msgstr "Voorbeeldafbeelding"
+#: public/class-du-sponsors-public.php:269
+#: public/class-du-sponsors-public.php:284
+#: public/class-du-sponsors-public.php:304
+msgid "Remove Image"
+msgstr "Afbeelding verwijderen"
 
-#: public/class-du-sponsors-public.php:245
-msgid "Remove Logo"
-msgstr "Logo verwijderen"
-
-#: public/class-du-sponsors-public.php:159
+#: public/class-du-sponsors-public.php:165
 msgid "Search Categories"
 msgstr "Categorieën zoeken"
 
-#: public/class-du-sponsors-public.php:126
+#: public/class-du-sponsors-public.php:131
 msgid "Search Sponsors"
 msgstr "Sponsors zoeken"
+
+#: public/class-du-sponsors-public.php:262
+#: public/class-du-sponsors-public.php:277
+#: public/class-du-sponsors-public.php:297
+msgid "Select Image"
+msgstr "Afbeelding selecteren"
 
 #. Description of the plugin
 msgid ""
@@ -141,22 +163,28 @@ msgstr ""
 msgid "Small"
 msgstr "Klein"
 
-#: public/class-du-sponsors-public.php:117
-#: public/class-du-sponsors-public.php:119
+#: public/class-du-sponsors-public.php:122
+#: public/class-du-sponsors-public.php:124
 msgid "Sponsor"
 msgstr "Sponsor"
 
-#: public/class-du-sponsors-public.php:157
+#: widgets/class-du-sponsor-adrotator.php:82
+msgid "Sponsor Ad Rotation"
+msgstr "Sponsor Ad Rotation"
+
+#: public/class-du-sponsors-public.php:163
 msgid "Sponsor Categories"
 msgstr "Sponsor Categorieën"
 
-#: public/class-du-sponsors-public.php:158
-#: widgets/class-du-sponsor-slider.php:70 widgets/class-du-sponsor-grid.php:70
+#: public/class-du-sponsors-public.php:164
+#: widgets/class-du-sponsor-slider.php:70
+#: widgets/class-du-sponsor-adrotator.php:70
+#: widgets/class-du-sponsor-grid.php:70
 msgid "Sponsor Category"
 msgstr "Sponsor Categorie"
 
 #. Meta box ID
-#: public/class-du-sponsors-public.php:194
+#: public/class-du-sponsors-public.php:201
 msgid "Sponsor Details"
 msgstr "Sponsorgegevens"
 
@@ -164,36 +192,36 @@ msgstr "Sponsorgegevens"
 msgid "Sponsor Lists"
 msgstr "Sponsor lijsten"
 
-#: public/class-du-sponsors-public.php:242
-msgid "Sponsor Logo"
-msgstr "Sponsor logo"
-
 #: widgets/class-du-sponsor-grid.php:82
 msgid "Sponsor Logo Height"
 msgstr "Sponsor Logo Hoogte"
 
-#: public/class-du-sponsors-public.php:116
-#: public/class-du-sponsors-public.php:118
+#: public/class-du-sponsors-public.php:121
+#: public/class-du-sponsors-public.php:123
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: public/class-du-sponsors-public.php:164
+#: public/class-du-sponsors-public.php:170
 msgid "Update Category"
 msgstr "Categorie bijwerken"
 
-#: public/class-du-sponsors-public.php:244
-msgid "Upload Logo"
-msgstr "Logo uploaden"
+#: public/class-du-sponsors-public.php:289
+msgid "URL Ad #1"
+msgstr "URL Advertentie #1"
 
-#: public/class-du-sponsors-public.php:264
-msgid "Use this image"
-msgstr "Gebruik deze afbeelding"
+#: public/class-du-sponsors-public.php:309
+msgid "URL Ad #2"
+msgstr "URL Advertentie #2"
 
-#: public/class-du-sponsors-public.php:124
+#: widgets/class-du-sponsor-adrotator.php:85
+msgid "Vertical"
+msgstr "Verticaal"
+
+#: public/class-du-sponsors-public.php:129
 msgid "View Sponsor"
 msgstr "Bekijk sponsor"
 
-#: public/class-du-sponsors-public.php:226
-#: public/class-du-sponsors-public.php:345
+#: public/class-du-sponsors-public.php:240
+#: public/class-du-sponsors-public.php:393
 msgid "Website"
 msgstr "Website"
