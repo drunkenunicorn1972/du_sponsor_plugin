@@ -141,8 +141,12 @@ class Du_Sponsor_AdRotator_Widget extends \Elementor\Widget_Base
                     while ($query->have_posts()) {
                         $query->the_post(); // Set the global $post variable
 
-                        $sponsor_ad_data = wp_get_attachment_image_src(get_post_meta(get_the_ID(), $meta_key, true), 'medium');
-                        $sponsor_ad_url = $sponsor_ad_data[0];
+                        $sponsor_ad_data = wp_get_attachment_image_src(get_post_meta(get_the_ID(), $meta_key, true), 'large');
+                        if (!empty($sponsor_ad_data[0])) {
+                            $sponsor_ad_url = $sponsor_ad_data[0];
+                        } else {
+                            $sponsor_ad_url = '#';
+                        }
                         $sponsor_name = get_the_title();
                         if ($ad_rotation == 'HOR') {
                             $sponsor_url = get_post_meta(get_the_ID(), '_sponsor_adurl2', true);
