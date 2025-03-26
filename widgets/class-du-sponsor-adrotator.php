@@ -124,7 +124,7 @@ class Du_Sponsor_AdRotator_Widget extends \Elementor\Widget_Base
                         ],
                         [
                             'key'     => $meta_key,
-                            'value'   => '',        // Ensure it's not empty
+                            'value'   => '0',        // Ensure it's not empty
                             'compare' => '!=',      // Not equal to an empty value
                         ],
                     ],
